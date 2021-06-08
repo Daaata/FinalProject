@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-    <script>
-
-    </script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </head>
 <body>
 <div id="app">
     <h1>My Header</h1>
     <p>My paragraph.</p>
     <p>{{message}}</p>
+    <script src="small.vue"></script>
+</div>
+<div id="app-3">
+    <p v-if="seen">Now you see me</p>
+    <p v-if="like">Now </p>
+    <script src="small.vue"></script>
+</div>
+<div id="app-4">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
     <script src="small.vue"></script>
 </div>
 </body>

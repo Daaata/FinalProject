@@ -1,10 +1,14 @@
 doctype html
 html
 head
-title=title
+    title=title
+    :javascript
+      | if (foo) {
+      |    bar()
+      | }
+
 body
-    h1 Student List using Jade engine
- 
+    h1 Student List using Jade engine 
     ul
         each item in List
-            li=item.name
+            p=item.Y

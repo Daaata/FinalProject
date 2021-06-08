@@ -15,4 +15,4 @@ http.createServer(function (req, res) {
     return res.end();
   });
 }).listen(8080);
-console.log("http://localhost:8080/index.html");
+console.log("http://localhost:8080/index2.html");

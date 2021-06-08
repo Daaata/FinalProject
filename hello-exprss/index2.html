@@ -1,0 +1,74 @@
+<!DOCTYPE HTML><!-- HTML5 宣告 很重要別漏掉-->
+<html>
+<head>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+</head>
+<body>
+<canvas id="canvas1" width="500" height="500" style="border:1px solid #ffffff;"></canvas>
+
+<script>
+
+    var canvas2 = document.getElementById('canvas1');
+    var context2 = canvas2.getContext('2d');
+    for(i=50;i<=450;i+=50){
+        context2.beginPath();//開始繪製
+     
+    context2.strokeStyle = '#ff0000';//設定線條顏色 預設為 黑色
+    context2.lineWidth = 0.5;//設定線條寬度 預設為 1
+    context2.lineCap = 'butt';//設定線頭格式 square / round / butt 預設值為square
+    //畫一條垂直的線
+    //context2.arc(50, 50, 5, 0, 2 * Math.PI);
+    context2.arc(i, i, 5, 0, 2 * Math.PI, false);
+    context2.fillStyle = 'rgba(255, 0, 0)'
+    context2.fill()    
+    context2.stroke();//繪製邊線
+    }
+    
+    
+    
+    
+    //此範例是在中間畫一個十字交插
+</script>
+
+<script>
+
+var canvas = document.getElementById('canvas1');
+var context = canvas.getContext('2d');
+
+context.beginPath();//開始繪製
+ 
+context.strokeStyle = '#000000';//設定線條顏色 預設為 黑色
+context.lineWidth = 0.5;//設定線條寬度 預設為 1
+context.lineCap = 'square';//設定線頭格式 square / round / butt 預設值為square
+//畫一條垂直的線
+context.moveTo(50, 50);//移到那一個坐標點 (X,Y)
+context.lineTo(450, 50);//從x點到y點
+context.moveTo(50, 50);//移到那一個坐標點 (X,Y)
+context.lineTo(50, 450);//從x點到y點
+context.moveTo(50, 450);//移到那一個坐標點 (X,Y)
+context.lineTo(450, 450);//從x點到y點
+context.moveTo(450, 50);//移到那一個坐標點 (X,Y)
+context.lineTo(450, 450);//從x點到y點
+
+for(i=50;i<450;i+=10){
+        context.moveTo(i, 50);//移到那一個坐標點 (X,Y)
+        context.lineTo(i, 450);//從x點到y點
+        context.moveTo(50, i);//移到那一個坐標點 (X,Y)
+        context.lineTo(450, i);//從x點到y點
+
+}
+
+context.stroke();//繪製邊線
+
+
+
+
+//此範例是在中間畫一個十字交插
+</script>
+
+
+</body>
+</html>
+
+
