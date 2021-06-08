@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+地圖與定位測試
+| 地圖上可顯示定位點
+| 點選定位點會觸發Alter，並顯示文字
+-->
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Map Test</title>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js'></script>
+	</head>
+	<body>
+		<h1>Map Test</h1>
+		<div style= "position:relative "> 
+		<img src="testmap.JPG" width="600" height="400">
+		<div style="position:absolute; left:70px; top:70px; color:#000; font-weight:bold" onclick="c1isclick()"><img src="locations.png" width="40" height="40"></div>
+		<div style="position:absolute; left:540px; top:5px;" onclick="c2isclick()"><img src="locations.png" width="40" height="40"></div>
+		<div style="position:absolute; left:232px; top:280px;"  onclick="c3isclick()"><img src="locations.png" height="40"></div>
+		</div>
+		
+		<script>
+			function c1isclick() {
+				alert("Desktop is clicked.");
+			}
+			function c2isclick() {
+				alert("Printer is clicked.");
+			}
+			function c3isclick() {
+				alert("Laptop is clicked.");
+			}
+		</script>
+	</body>
+</html>
+
