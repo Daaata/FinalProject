@@ -1,18 +1,20 @@
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
+var create = require('./models/create');
+//let connect = take_nodes.take_nodes();
+const mongo = require('mongodb').MongoClient;
+const uri = "mongodb+srv://tyson147258:55688@testuse.4dc1h.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+mongo.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true}, function (err, db) {
+  var dbo = db.db("nodes");
+    dbo.collection("node"). find({}).toArray(function(err, result) { // 返回集合中所有数据
+        if (err) throw err;      
+        
+        db.close();
+        console.log(result);
+        let connect = create.create(result);
+      
+    }
+    );
+});
 
-http.createServer(function (req, res) {
-  var q = url.parse(req.url, true);
-  var filename = "." + q.pathname;
-  fs.readFile(filename, function(err, data) {
-    if (err) {
-      res.writeHead(404, {'Content-Type': 'text/html'});
-      return res.end("404 Not Found");
-    } 
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(data);
-    return res.end();
-  });
-}).listen(8080);
-console.log("http://localhost:8080/index2.html");

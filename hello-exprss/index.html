@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang = "zh-Hant-TW">
 <head>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <meta charset="utf-8">
+  
+
 </head>
 <body>
 <div id="app">
     <h1>My Header</h1>
     <p>My paragraph.</p>
     <p>{{message}}</p>
-    <script src="small.vue"></script>
-</div>
-<div id="app-3">
-    <p v-if="seen">Now you see me</p>
-    <p v-if="like">Now </p>
-    <script src="small.vue"></script>
-</div>
-<div id="app-4">
-    <ol>
-      <li v-for="todo in todos">
-        {{ todo.text }}
+    <div v-if="loading">Yes</div>
+    <div v-show="showing">Showing</div>
+    <ul>
+      <li v-for="item in colors">
+        {{item}}
       </li>
-    </ol>
-    <script src="small.vue"></script>
+    </ul>
+    <h2>各家父親</h2>
+    <ul>
+      <button v-for="item in families" v-on:click="myFa(item.father)">
+        {{item.father}}
+      </button>
+    </ul>
+    <p>{{message}}</p>
+    <div v-if="score>=60">passs</div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script type="application/javascript" src="small.vue"></script>
 </div>
 </body>
 </html>
