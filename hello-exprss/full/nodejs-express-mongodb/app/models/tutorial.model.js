@@ -3,7 +3,7 @@ module.exports = mongoose => {
     "tutorial",
     mongoose.Schema(
       {
-        name: String,
+        names: String,
         X: String,
         Y: String
       },

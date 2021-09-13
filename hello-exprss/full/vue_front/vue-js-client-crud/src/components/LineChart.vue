@@ -16,7 +16,7 @@ export default {
     printdata() {
       console.log(this.tutorials.length);
       for (let i = 0; i < this.tutorials.length; i++){
-        console.log(this.tutorials[i].name);
+        console.log(this.tutorials[i].names);
       }
     },
     retrieveTutorials() {
@@ -30,8 +30,7 @@ export default {
               datasets: [{
               label: 'Scatter Dataset',
               data: [{x: Number(this.tutorials[0].X),y: Number(this.tutorials[0].Y)}, {x: Number(this.tutorials[1].X),y: Number(this.tutorials[1].Y)}, 
-                    {x: Number(this.tutorials[2].X),y: Number(this.tutorials[2].Y)},{x: Number(this.tutorials[3].X),y: Number(this.tutorials[3].Y)},
-                    {x: Number(this.tutorials[4].X),y: Number(this.tutorials[4].Y)},{x: Number(this.tutorials[5].X),y: Number(this.tutorials[5].Y)}],
+                    {x: Number(this.tutorials[2].X),y: Number(this.tutorials[2].Y)}],
               backgroundColor: 'rgb(0, 0, 0)'
            }],
           },{
