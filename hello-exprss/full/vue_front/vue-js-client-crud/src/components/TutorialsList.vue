@@ -2,7 +2,7 @@
   <div class="list row">
     <div class="col-md-8">
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Search by title"
+        <input type="text" class="form-control" placeholder="Search by IPv6 address"
           v-model="title"/>
         <div class="input-group-append">
           <button class="btn btn-outline-secondary" type="button"
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="col-md-6">
-      <h4>Tutorials List</h4>
+      <h4>Nodes List</h4>
       <ul class="list-group">
         <li class="list-group-item"
           :class="{ active: index == currentIndex }"
@@ -25,33 +25,25 @@
           {{ tutorial.names }}
         </li>
       </ul>
-
-      <button class="m-3 btn btn-sm btn-danger" @click="removeAllTutorials">
-        Remove All
-      </button>
     </div>
     <div class="col-md-6">
       <div v-if="currentTutorial">
-        <h4>Tutorial</h4>
+        <h4>Node</h4>
         <div>
-          <label><strong>Title:</strong></label> {{ currentTutorial.name }}
+          <label><strong>IPv6 address:</strong></label> {{ currentTutorial.names }}
         </div>
         <div>
-          <label><strong>Description:</strong></label> {{ currentTutorial.X }}
+          <label><strong>X座標:</strong></label> {{ currentTutorial.X }}
         </div>
         <div>
-          <label><strong>Status:</strong></label> {{ currentTutorial.Y}}
+          <label><strong>Y座標:</strong></label> {{ currentTutorial.Y}}
         </div>
 
-        <a class="badge badge-warning"
-          :href="'/tutorials/' + currentTutorial.id"
-        >
-          Edit
-        </a>
+        
       </div>
       <div v-else>
         <br />
-        <p>Please click on a Tutorial...</p>
+        <p>Please click on Node List or Search...</p>
       </div>
     </div>
   </div>

@@ -28,10 +28,10 @@ export default {
           this.renderChart({
               labels: ['Blue'],
               datasets: [{
-              label: 'Scatter Dataset',
+              label: '室內點座標圖',
               data: [{x: Number(this.tutorials[0].X),y: Number(this.tutorials[0].Y)}, {x: Number(this.tutorials[1].X),y: Number(this.tutorials[1].Y)}, 
                     {x: Number(this.tutorials[2].X),y: Number(this.tutorials[2].Y)}],
-              backgroundColor: 'rgb(0, 0, 0)'
+              backgroundColor: 'rgb(65, 105, 225)'
            }],
           },{
           options: {

@@ -1,22 +1,15 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <router-link to="/" class="navbar-brand">bezKoder</router-link>
-      <div class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <router-link to="/tutorials" class="nav-link">Tutorials</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/add" class="nav-link">Add</router-link>
-        </li>
-      </div>
+      <router-link to="/" class="navbar-brand">室內定位</router-link>
+      
     </nav>
 
     <div class="container mt-3">
       <router-view />
     </div>
     <div class="row justify-content-center align-items-stretch">
-        <div class="col-md-5 mt-2">
+        <div class="col-md-5 mt-2" style="width:750px; height:750px">
           <LineChart/>
         </div>
     </div>
