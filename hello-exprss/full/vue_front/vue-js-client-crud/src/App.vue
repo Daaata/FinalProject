@@ -9,7 +9,7 @@
       <router-view />
     </div>
     <div class="row justify-content-center align-items-stretch">
-        <div class="col-md-5 mt-2" style="width:750px; height:750px">
+        <div class="col-md-8 mt-2 " style="width:1750px; height:1750px">
           <LineChart/>
         </div>
     </div>
@@ -18,7 +18,7 @@
 
 <script>
 
-import LineChart from './components/LineChart.vue'
+import LineChart from './components/LineChart'
 
 export default {
   name: "app",
