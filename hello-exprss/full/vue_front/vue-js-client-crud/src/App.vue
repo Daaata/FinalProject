@@ -8,8 +8,8 @@
     <div class="container mt-3">
       <router-view />
     </div>
-    <div class="row justify-content-center align-items-stretch">
-        <div class="col-md-8 mt-2 " style="width:1750px; height:1750px">
+    <div class="row justify-content-center align-items-stretch" >
+        <div class="col-md-8 mt-2 " style="width:1750px; height:400px">
           <LineChart/>
         </div>
     </div>
